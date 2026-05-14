@@ -1,0 +1,23 @@
+{
+  "classificacao_sentimento": [
+    {
+      "input": "Produto excelente e entrega rápida.",
+      "output": "POSITIVO"
+    },
+    {
+      "input": "Veio quebrado e atrasado.",
+      "output": "NEGATIVO"
+    }
+  ],
+
+  "extracao_produto": [
+    {
+      "input": "Notebook Dell de R$3500 com tela quebrada",
+      "output": {
+        "produto": "Notebook Dell",
+        "preco": "R$3500",
+        "defeito": "tela quebrada"
+      }
+    }
+  ]
+}

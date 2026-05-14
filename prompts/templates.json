@@ -1,0 +1,16 @@
+{
+  "classificacao": {
+    "instrucao": "Classifique o sentimento do texto.",
+    "formato_output": "Responda apenas POSITIVO, NEGATIVO ou MISTO."
+  },
+
+  "extracao": {
+    "instrucao": "Extraia os dados do texto.",
+    "formato_output": "Retorne em JSON."
+  },
+
+  "geracao_email": {
+    "instrucao": "Crie um email profissional.",
+    "formato_output": "Use linguagem formal."
+  }
+}

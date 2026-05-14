@@ -1,0 +1,132 @@
+tarefa,tecnica,input,esperado,resposta,acuracia,tokens_prompt,tokens_resposta,tempo_ms
+classificacao_sentimento,ZeroShot,Produto excelente e entrega rápida.,POSITIVO,POSITIVO,1,45,2,2717.81
+classificacao_sentimento,FewShot,Produto excelente e entrega rápida.,POSITIVO,POSITIVO,1,62,2,2657.06
+classificacao_sentimento,CoT,Produto excelente e entrega rápida.,POSITIVO,RESPOSTA: POSITIVO,1,79,7,2764.34
+classificacao_sentimento,Role,Produto excelente e entrega rápida.,POSITIVO,POSITIVO,1,45,2,2539.94
+classificacao_sentimento,ZeroShot,Veio quebrado e atrasado.,NEGATIVO,NEGATIVO,1,48,3,2560.06
+classificacao_sentimento,FewShot,Veio quebrado e atrasado.,NEGATIVO,NEGATIVO,1,65,3,2533.61
+classificacao_sentimento,CoT,Veio quebrado e atrasado.,NEGATIVO,"Sendo assim, classifico o sentimento como:
+
+NEGATIVO",1,82,15,2976.42
+classificacao_sentimento,Role,Veio quebrado e atrasado.,NEGATIVO,NEGATIVO,1,48,3,2568.36
+extracao_produto,ZeroShot,Notebook Dell de R$3000 com tela quebrada,"{'produto': 'Notebook Dell', 'preco': 'R$3000', 'defeito': 'tela quebrada'}","Here is the extracted data in JSON format:
+
+```
+{
+  ""produto"": ""Notebook Dell"",
+  ""preço"": ""R$3000"",
+  ""defeito"": ""tela quebrada""
+}
+```",0,49,47,4060.83
+extracao_produto,FewShot,Notebook Dell de R$3000 com tela quebrada,"{'produto': 'Notebook Dell', 'preco': 'R$3000', 'defeito': 'tela quebrada'}","Entendi!
+
+Para extrair o produto, preço e defeito da entrada, posso utilizar a seguinte fórmula:
+
+```
+produto = Notebook Dell
+preco = R$3000
+defeito = tela quebrada
+```
+
+E, como você pediu, a resposta será em JSON:
+```json
+{
+  ""produto"": ""Notebook Dell"",
+  ""preco"": ""R$3000"",
+  ""defeito"": ""tela quebrada""
+}
+```
+Está pronto!",0,96,110,6478.63
+extracao_produto,CoT,Notebook Dell de R$3000 com tela quebrada,"{'produto': 'Notebook Dell', 'preco': 'R$3000', 'defeito': 'tela quebrada'}","Here is the extracted information in JSON format:
+
+```
+{
+""produto"": ""Notebook Dell"",
+""preco"": 3000,
+""defeito"": ""tela quebrada""
+}
+```",0,79,42,3927.13
+extracao_produto,Role,Notebook Dell de R$3000 com tela quebrada,"{'produto': 'Notebook Dell', 'preco': 'R$3000', 'defeito': 'tela quebrada'}","{ ""produto"": ""Notebook Dell"", ""preço"": ""R$3000"", ""defeito"": ""tela quebrada"" }",0,49,32,3617.01
+geracao_email,ZeroShot,Pedido atrasado,Email formal,"Subject: Follow-up on Overdue Order #XXXXX
+
+Dear [Customer's Name],
+
+I am writing to follow up on your order #XXXXX, which was placed on [Order Date] and is now overdue. Our records indicate that the expected delivery date has passed, and we are concerned about the status of your shipment.
+
+As per our standard procedures, we have been monitoring the situation closely, and I would like to request an update from your end regarding the current status of your order. We understand that unforeseen circumstances may arise, and we are more than happy to work with you to resolve any issues that may be causing the delay.
+
+In the meantime, our team has reviewed the order details and is prepared to assist with any necessary adjustments or changes to ensure timely delivery. Please let us know if there is anything we can do to expedite the process.
+
+We appreciate your prompt attention to this matter, and I look forward to hearing back from you soon. If you have any questions or concerns, please do not hesitate to contact me directly at [Your Email Address] or by phone at [Your Phone Number].
+
+Thank you for your cooperation, and we remain committed to providing the highest level of service to our valued customers.
+
+Best regards,
+
+[Your Name]
+[Your Title]
+[Company Name]
+[Contact Information]",0,35,265,12157.73
+geracao_email,FewShot,Pedido atrasado,Email formal,"Here is an example of a professional email:
+
+Subject: Follow-up on Delayed Order
+
+Dear valued customer,
+
+I am writing to follow up on your recent order that has been delayed. We apologize for the inconvenience this may have caused and appreciate your patience as we work to resolve the issue.
+
+Our team is working diligently to ensure that your order is processed as soon as possible. You can expect an update on the status of your order within the next [insert timeframe, e.g., 24-48 hours].
+
+In the meantime, please do not hesitate to contact us if you have any questions or concerns. Your satisfaction is our top priority, and we will do everything in our power to ensure that your experience with us is a positive one.
+
+Thank you for your understanding and cooperation.
+
+Best regards,
+
+[Your Name]
+[Your Company]",0,53,167,8516.25
+geracao_email,CoT,Pedido atrasado,Email formal,"Here is the step-by-step approach to create an email:
+
+**1. Entenda o problema:**
+The customer has sent a delayed request, and it's essential to acknowledge their concern and provide a solution.
+
+**2. Crie saudação:**
+Dear [Customer Name],
+
+**3. Explique solução:**
+I am writing to apologize for the delay in processing your recent request. I understand that timely responses are crucial, and I regret any inconvenience this may have caused.
+
+To rectify the situation, I have reviewed our system and found a solution to expedite the process. Our team will prioritize your request immediately, and you can expect an update within [timeframe] days.
+
+Please know that we value your business and appreciate your patience in this matter. If you have any further questions or concerns, please do not hesitate to reach out.
+
+Thank you for your understanding, and I look forward to resolving this issue promptly.
+
+Best regards,
+
+[Your Name]
+[Your Title]
+[Company Name]
+
+This email aims to:
+
+* Acknowledge the customer's concern
+* Provide a solution to expedite the process
+* Show appreciation for their patience and business
+* Offer support if further assistance is needed",0,65,243,11345.19
+geracao_email,Role,Pedido atrasado,Email formal,"Assunto: Atraso no Pedido de [Nome do Pedido]
+
+Prezados [Nome da Equipe],
+
+Eu gostaria de entrar em contato com vocês para discutir o pedido de [nome do pedido] que foi feito em [data da entrada]. Infelizmente, notamos que o pedido não está dentro do prazo previsto e estamos trabalhando para entender as causas do atraso.
+
+Nossa equipe está comprometida em fornecer um serviço de alta qualidade e estamos fazendo todo o possível para garantir que os pedidos sejam atendidos com a maior brevidade possível. No entanto, gostaríamos de saber mais sobre as circunstâncias que levaram ao atraso e trabalhar juntos para encontrar uma solução.
+
+Por favor, entre em contato conosco assim que possível para discutir o assunto e estabelecer um plano de ação. Estamos ansiosos para trabalhar com vocês e resolver essa situação.
+
+Atenciosamente,
+
+[Seu nome]
+[Seu cargo ou título]
+[Seu email]
+[Seu telefone]",0,35,240,11247.45

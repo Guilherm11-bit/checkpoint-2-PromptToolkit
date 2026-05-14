@@ -1,0 +1,30 @@
+{
+  "classificacao_sentimento": [
+    {
+      "input": "Produto excelente e entrega rápida.",
+      "esperado": "POSITIVO"
+    },
+    {
+      "input": "Veio quebrado e atrasado.",
+      "esperado": "NEGATIVO"
+    }
+  ],
+
+  "extracao_produto": [
+    {
+      "input": "Notebook Dell de R$3000 com tela quebrada",
+      "esperado": {
+        "produto": "Notebook Dell",
+        "preco": "R$3000",
+        "defeito": "tela quebrada"
+      }
+    }
+  ],
+
+  "geracao_email": [
+    {
+      "input": "Pedido atrasado",
+      "esperado": "Email formal"
+    }
+  ]
+}
